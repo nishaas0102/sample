@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<title>Library Management System</title>
+
+<style>
+body {
+    background-color: red;
+    font-family: Arial;
+}
+form {
+    background: lightblue;
+   
+}
+</style>
+
+<script>
+function library(){
+    let bookName = document.getElementById("book").value;
+    let author = document.getElementById("author").value;
+    let isbn = document.getElementById("isbn").value;
+    let availability = document.getElementById("avail").value;
+    let numberOfBooks = document.getElementById("number").value;
+    let dueDate = document.getElementById("date").value;
+
+    if(bookName=="" || author=="" || isbn=="" || availability=="" || numberOfBooks=="" || dueDate==""){
+        alert("All fields must be filled");
+        return false;
+    }
+
+    alert("Form submitted successfully");
+    return true;
+}
+</script>
+
+</head>
+
+<body>
+
+<form onsubmit="return library()">
+
+<label>BOOK NAME:</label><br>
+<input type="text" id="book"><br><br>
+
+<label>AUTHOR:</label><br>
+<input type="text" id="author"><br><br>
+
+<label>ISBN:</label><br>
+<input type="text" id="isbn"><br><br>
+
+<label>AVAILABILITY:</label><br>
+<input type="text" id="avail"><br><br>
+
+<label>NUMBER OF BOOKS AVAILABLE:</label><br>
+<input type="number" id="number"><br><br>
+
+<label>DUE DATE:</label><br>
+<input type="date" id="date"><br><br>
+
+<label>FEEDBACK:</label><br>
+<input type="radio" name="position" value="good"> Good
+<input type="radio" name="position" value="bad"> Bad<br><br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
